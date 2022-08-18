@@ -15,6 +15,7 @@ class Queue:
         else: 
             self.queue.append(data) 
             self.rear += 1 
+            print("%d is inserted to the queue"% (data))
 
     # Function to delete an element from the front of the queue (Dequeue) 
     def deleteElement(self): 
@@ -42,21 +43,22 @@ class Queue:
           self.queue[self.front])
 
 # Driver code 
-if __name__ == '__main__': 
-    print("Queue in python")
-    #  Make a new queue of capacity 5 
-    newQueue = Queue(5) 
+print("Queue in python")
+#  Make a new queue of capacity 5 
+newQueue = Queue(5) 
 
-    # Display the queue elements 
-    newQueue.displayQueue() 
+# Display the queue elements 
+newQueue.displayQueue() 
 
-    # Insert elements into the queue 
-    newQueue.insertElement(10)
-    newQueue.insertElement(20)
-    newQueue.insertElement(30)
-    newQueue.insertElement(40)
-    newQueue.insertElement(50) 
+# Insert elements into the queue 
+print("Inserting elements into the queue")
+newQueue.insertElement(10)
+newQueue.insertElement(20)
+newQueue.insertElement(30)
+newQueue.insertElement(40)
+newQueue.insertElement(50) 
 
-    # Display the inserted elements 
-    newQueue.displayQueue() 
+# Display the inserted elements 
+print("Print the inserted elements")
+newQueue.displayQueue() 
 

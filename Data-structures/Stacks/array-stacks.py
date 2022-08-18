@@ -24,7 +24,6 @@ def addItem(stack, item):
  
 
 # function for removing item from the stack  
-
 def removeItem(stack):  
     if  (stackIsEmpty(stack)):  
       return str(-maxsize - 1)  

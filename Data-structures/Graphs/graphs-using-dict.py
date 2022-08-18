@@ -13,10 +13,8 @@ def generate_edges(graph):
         for neighbor in graph[node]: 
             edges.append((node, neighbor))
     return edges
-
-
+    
 # Function for adding the edges of the graph
-
 def addEdge(graph,a,b): 
     graph[a].append(b)
 
@@ -27,7 +25,6 @@ addEdge(graphOne,'c','d')
 addEdge(graphOne,'d','e')
 addEdge(graphOne,'e','f')
 addEdge(graphOne,'f','g')
-
 print(generate_edges(graphOne))
 
 # CODE FOR GENERATING SHORTEST AND LONGEST PATH OF THE EDGE NOT IMPLEMENTED

@@ -1,14 +1,15 @@
-# Class to represent the stack node
+# IMPLEMENTING STACKS USING LINKED LISTS
 from sqlalchemy import null, true
 
 
+# Class to represent the stack node
 class StackNode: 
     # Initialize the stack node 
     def __init__(self, data): 
         self.data = data 
         self.next = None 
 
-
+# Class to represent the stack
 class Stack: 
     # Create the head as a default null 
     def __init__(self): 
@@ -40,6 +41,7 @@ class Stack:
             removedItem = self.head 
             self.head = self.head.next 
             removedItem.next = None 
+            print("%d has been removed from the stack"% (removedItem.data))
             return removedItem.data
     
     # Checking the first item on the stack 
@@ -50,20 +52,27 @@ class Stack:
             return self.head.data
 
     def display(self): 
-        topNode = self.head 
+        topNode = self
         if self.isEmpty(): 
             print("Stack has no elements") 
         else: 
             while (topNode != None): 
-                print(topNode.data, '->', end='')
+                # print(topNode.data, '->', end='')
+                print(topNode.data)
                 topNode = topNode.next
                 return 
 
 # Driver code
 newStack = Stack() 
-# newStack.addItem(10)
-# newStack.addItem(20)
-# newStack.addItem(30)
+print("====Adding items to the stack=======")
+newStack.addItem(10)
+newStack.addItem(20)
+newStack.addItem(30)
+newStack.addItem(40)
+newStack.addItem(50)
+print("======Removing the item added recently to the stack=======")
+newStack.removeItem()
 
-# Display the stack 
-newStack.display()
+
+# Check on display() function since it doesn't work
+# Check on StackNode class since it's also not working 
