@@ -41,6 +41,16 @@ class Queue {
         }
     }
 
+    // Function for printing the queue
+    printQueue() {
+        let queue = ""; 
+        this.data.forEach( item => {
+            queue += item + " "; 
+        })
+        console.log(queue); 
+    } 
+
+
 } 
 
 let queue = new Queue(); 
@@ -57,4 +67,7 @@ queue.checkTop();
 
 // Removing item from the queue 
 queue.dequeue(); 
+
+// Print all the items in thq queue 
+queue.printQueue(); 
 
